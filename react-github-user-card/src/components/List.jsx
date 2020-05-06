@@ -12,7 +12,7 @@ const List = props => {
                     name={user.name} 
                     login={user.login} 
                     location={user.location}
-                    profile={user.profile}
+                    html_url={user.html_url}
                     followers={user.followers}
                     following={user.following}
                     bio={user.bio}

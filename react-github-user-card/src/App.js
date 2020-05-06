@@ -61,10 +61,13 @@ class App extends React.Component {
     axios.get("https://api.github.com/users/shayne-smith/followers")
       .then(res => {
         console.log(res)
-        res.data.map( (follower, index) => {
-          this.setState({
-            followers: [...this.state.followers, follower]
-          })
+        // res.data.map( (follower, index) => {
+        //   this.setState({
+        //     followers: [...this.state.followers, follower]
+        //   })
+        // })
+        this.setState({
+          followers: this.state.followers.concat(res.data)
         })
       })
       .catch(err => {
@@ -84,7 +87,7 @@ class App extends React.Component {
       <div className="App container">
         <div className="header">
           <img src={lambdaLogo} alt="Lambda Logo"/>
-          <p>❤️'s</p>
+          <p><span role='img'>❤️'s</span></p>
           <img src={githubLogo} alt="GitHub Logo" />
         </div>
         <div className='users'>

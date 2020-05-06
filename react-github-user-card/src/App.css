@@ -121,3 +121,20 @@ body {
   font-style: italic;
   margin: 3px 0 10px;
 }
+
+.followerCardInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.followerCardInfo h3 {
+  width: 100%;
+  text-align: center;
+}
+
+.followerCardInfo a {
+  text-decoration: none;
+}
