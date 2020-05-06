@@ -5,16 +5,21 @@ import User from './User'
 const List = props => {
     console.log('userList rendering');
     return (
-        props.userList.map(user => (
-            <User 
-                avatar_url={user.avatar_url} 
-                name={user.name} 
-                login={user.login} 
-                profile={user.profile}
-                followers={user.followers}
-                following={user.following}
-            />
-        ))
+        <>
+            {props.userList.map( (user, index) => (
+                <User 
+                    avatar_url={user.avatar_url} 
+                    name={user.name} 
+                    login={user.login} 
+                    location={user.location}
+                    profile={user.profile}
+                    followers={user.followers}
+                    following={user.following}
+                    bio={user.bio}
+                    key={index}
+                />
+            ))}
+        </>
     );
 };
 
